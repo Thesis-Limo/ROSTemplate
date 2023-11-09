@@ -17,3 +17,6 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 6. Before shutting down: sudo ./run stop
 
+There is a alias for building: cbuild in all containers
+
+Adding packages from online sources can be done in the dockerfile -> so that everyone get the same environment
