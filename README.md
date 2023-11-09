@@ -11,7 +11,9 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 3. To run the simulation: sudo ./run start
 
-4. development docker -> so you can build: sudo ./run terminal
+4. There is still a problem if you run it once, so go into the terminal container and build. Then restart everything and it would be fine
 
-5. Before shutting down: sudo ./run stop
+5. development docker -> so you can build: sudo ./run terminal
+
+6. Before shutting down: sudo ./run stop
 
