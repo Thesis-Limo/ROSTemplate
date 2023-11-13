@@ -8,7 +8,9 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 1. chmod +x ./run
 
-2. sudo ./run build
+2. sudo ./run install (with NVIDIA gpu => install this https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
+3. sudo ./run installnopgu (for env without nvidia gpu)
 
 3. To run the simulation: sudo ./run start
 

@@ -1,7 +1,11 @@
 #!/bin/bash
 xhost +
-function build {
+function install {
 	docker build -t thesis .
+}
+
+function installnogpu {
+	docker build -t thesis -f Dockerfile.nogpu .
 }
 
 function start {
