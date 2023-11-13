@@ -1,4 +1,5 @@
 # Template for ROS
+
 This holds docker containers so we can work together very easily
 
 In the file run you can find several functions that can be used to setup the environment
@@ -7,7 +8,7 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 1. chmod +x ./run
 
-2. sudo ./run install
+2. sudo ./run build
 
 3. To run the simulation: sudo ./run start
 
