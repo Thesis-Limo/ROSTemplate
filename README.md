@@ -10,15 +10,15 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 2. sudo ./run install (with NVIDIA gpu => install this https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
-3. sudo ./run installnopgu (for env without nvidia gpu)
+3. sudo ./run installnogpu (for env without nvidia gpu)
 
-3. To run the simulation: sudo ./run start
+4. To run the simulation: sudo ./run start
 
-4. There is still a problem if you run it once, so go into the terminal container and build. Then restart everything and it would be fine
+5. There is still a problem if you run it once, so go into the terminal container and build. Then restart everything and it would be fine
 
-5. development docker -> so you can build: sudo ./run terminal
+6. development docker -> so you can build: sudo ./run terminal
 
-6. Before shutting down: sudo ./run stop
+7. Before shutting down: sudo ./run stop
 
 There is a alias for building: cbuild in all containers
 
