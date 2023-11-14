@@ -12,7 +12,7 @@ Be sure that docker engine is installed ( we don't need the docker desktop)
 
 3. sudo ./run installnopgu (for env without nvidia gpu)
 
-3. To run the simulation: sudo ./run start
+3. To run the simulation: sudo ./run start or sudo ./run startNoGPU
 
 4. There is still a problem if you run it once, so go into the terminal container and build. Then restart everything and it would be fine
 

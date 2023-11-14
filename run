@@ -9,10 +9,14 @@ function installnogpu {
 }
 
 function start {
-	docker compose up -d roscore terminal rviz gazebo
+	docker compose up -d roscore terminal rvizGPU gazeboGPU
+}
+
+function startNoGPU {
+	docker compose up -d roscore terminal rvizNOGPU gazeboNOGPU
 }
 function startNoSim {
-	docker compose up -d roscore terminal rviz
+	docker compose up -d roscore terminal rvizGPU
 }
 
 function terminal {
