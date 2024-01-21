@@ -1,5 +1,4 @@
-
-FROM nvidia/cudagl:11.1.1-base-ubuntu20.04
+FROM nvidia/cudagl:11.1.1-base-ubuntu18.04
 
 # Minimal setup
 
@@ -22,8 +21,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
-RUN apt-get update && apt-get install -y --no-install-recommends ros-noetic-desktop-full
-RUN bash /opt/ros/noetic/setup.bash
+RUN apt-get update && apt-get install -y --no-install-recommends ros-melodic-desktop-full
+RUN bash /opt/ros/melodic/setup.bash
 RUN apt-get install -y --no-install-recommends python3-rosdep
     
 RUN rosdep init \
@@ -32,19 +31,19 @@ RUN rosdep init \
 
 #ros dependencies
 RUN apt-get update && apt-get install -y\
-    ros-noetic-tf2-geometry-msgs \
+    ros-melodic-tf2-geometry-msgs \
     python3-catkin-tools \
-    ros-noetic-tf2-geometry-msgs \
-    ros-noetic-catkin-virtualenv \
-    ros-noetic-ros-control \
-    ros-noetic-ros-controllers \
-    ros-noetic-rosparam-shortcuts \
-    ros-noetic-image-geometry \
+    ros-melodic-tf2-geometry-msgs \
+    ros-melodic-catkin-virtualenv \
+    ros-melodic-ros-control \
+    ros-melodic-ros-controllers \
+    ros-melodic-rosparam-shortcuts \
+    ros-melodic-image-geometry \
     python3-catkin-tools 
 
 #pip installations
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+# COPY requirements.txt requirements.txt
+# RUN pip install -r requirements.txt
 
 #setup env variables for display
 ENV NVIDIA_VISIBLE_DEVICES \
